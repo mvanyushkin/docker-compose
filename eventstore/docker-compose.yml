@@ -1,0 +1,16 @@
+
+version: '3'
+
+services:
+  eventstore:
+    image: eventstore/eventstore
+    volumes:
+      - eventstore-data:/var/opt/eventstore/data
+    ports:
+      - "2113:2113"
+      - "1113:1113"
+
+volumes:
+  eventstore-data:
+
+
